@@ -46,7 +46,7 @@ def blur_video(input_video_path):
             face_roi = frame[y1:y2, x1:x2]
             
             if face_roi.size > 0:
-                blurred_face = cv2.medianBlur(face_roi, 15)
+                blurred_face = cv2.medianBlur(face_roi, 27)
                 frame[y1:y2, x1:x2] = blurred_face
 
         writer.write(frame)
